@@ -27,6 +27,10 @@ routes.route('/monsters/:index?')
         res.send({message:'Success! More monsters!'})
     })
     .put(function(req, res){
+        res.send(
+            editMonster(req.params.index))
+    })
+    .delete(function(req, res){
         removeMonster(req.params.index)
         res.send({message:"poof.  monster gone"})
     })

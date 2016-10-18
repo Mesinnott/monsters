@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css">
 	<title>MONSTERS</title>
 </head>
 
@@ -12,9 +12,9 @@
 
 
 	<h1>Monster Registration</h1>
-	<form>
-		<input type="text" name="name" placeholder="name" />
-		<input type="text" name="age" placeholder="age" />
+	<form id = 'submit'>
+		<input type="text" name="name" placeholder="name"/>
+		<input type="text" name="age" placeholder="age"/>
 		<input type="text" name="description" placeholder="description" />
 		<input type="number" name="sightings" placeholder="0" />
 		<input type="text" name="photoUrl" placeholder="Image URL" />
@@ -29,7 +29,7 @@
     <option value="other">Other</option>
     <option value="unknown">Unknown</option>
   </select>
-		<button type="submit">Add</button>
+		<button id='submit' type="submit">Add</button>
 	</form>
 
 
@@ -43,9 +43,9 @@
 
 	</div>
 
-
-<script src = public/app/monster-controller.js></script>
-<script src = public/app/monster-service.js></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src='app/monster-service.js'></script>
+	<script src='app/monster-controller.js'></script>
 </body>
 
 </html>
