@@ -1,15 +1,51 @@
-<h1>Monster Registration</h1>
-<form>
-  <input type="text" name="name" placeholder="name"/>
-  <input type="text" name="age" placeholder="age"/>
-  <input type="text" name="description" placeholder="description"/>
-  <input type="text" name="photoUrl" placeholder="Image URL"/>
-  <select type="text" name="type">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="style.css">
+	<title>MONSTERS</title>
+</head>
+
+<body>
+
+
+	<h1>Monster Registration</h1>
+	<form>
+		<input type="text" name="name" placeholder="name" />
+		<input type="text" name="age" placeholder="age" />
+		<input type="text" name="description" placeholder="description" />
+		<input type="number" name="sightings" placeholder="0" />
+		<input type="text" name="photoUrl" placeholder="Image URL" />
+		<select type="text" name="type">
     <option value="">--Select Type--</option>
     <option value="vampire">Vampire</option>
     <option value="zombie">Zombie</option>
     <option value="witch">Witch</option>
     <option value="monster">Monster</option>
+    <option value="robot">Robot</option>
+    <option value="ghost">Ghost</option>
+    <option value="other">Other</option>
+    <option value="unknown">Unknown</option>
   </select>
-  <button type="submit">Add</button>
-</form>
+		<button type="submit">Add</button>
+	</form>
+
+
+	<div id='monsterCards'>
+		<div class="container">
+			<div class="row">
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+<script src = public/app/monster-controller.js></script>
+<script src = public/app/monster-service.js></script>
+</body>
+
+</html>
