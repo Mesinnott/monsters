@@ -1,9 +1,11 @@
 body{
-    background-color: blue
+    background-color: greenyellow
+
 }
 .edit{
     background-color: red;
+   border: 50px dashed cadetblue;
     position: fixed;
-    /*margin-top: 50px;*/
     z-index: 9999;
+    text-align: center;
 }
