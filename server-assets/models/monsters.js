@@ -12,10 +12,10 @@ function removeMonster(index){
 
 function editMonster(index, newMonster){
     if(index<monsters.length){
-        monsters[index]=newMonsterreturn
+        monsters[index]= newMonster
         return{message:'you done edit dat monster'}
     }
-    return{error:'dat monSTAR no existy'}
+    return{error:'that monster no existy'}
 }
 
 routes.route('/monsters/:index?')
@@ -28,7 +28,7 @@ routes.route('/monsters/:index?')
     })
     .put(function(req, res){
         res.send(
-            editMonster(req.params.index))
+            editMonster(req.params.index, req.body.monster))
     })
     .delete(function(req, res){
         removeMonster(req.params.index)

@@ -33,6 +33,32 @@
 	</form>
 
 
+  <div id ='editForm' class='edit hidden'>
+    <h1> Edit this monster</h1>
+    <form id = 'editSubmit'>
+		<input id='editName'type="text" name="name" placeholder="name"/>
+		<input id='editAge' type="text" name="age" placeholder="age"/>
+		<input id='editDesc' type="text" name="description" placeholder="description" />
+		<input id='editSight' type="number" name="sightings" placeholder="0" />
+		<input id='editPhoto' type="text" name="photoUrl" placeholder="Image URL" />
+		<select id='editType' type="text" name="type">
+    <option value="">--Select Type--</option>
+    <option value="vampire">Vampire</option>
+    <option value="zombie">Zombie</option>
+    <option value="witch">Witch</option>
+    <option value="monster">Monster</option>
+    <option value="robot">Robot</option>
+    <option value="ghost">Ghost</option>
+    <option value="other">Other</option>
+    <option value="unknown">Unknown</option>
+  </select>
+  <input type='text' class='hidden' id='editId'name='idNum'placeholder='sfs'/>
+		<button id='updateMonster' type="submit">Submit Edit</button>
+    <button id='close'>close</button>
+	</form>
+  </div>
+
+
 	<div id='monsterCards'>
 		<div class="container">
 			<div class="row">

@@ -1,6 +1,6 @@
 function MonsterService(){
     var baseUrl= 'http://localhost:8080/monsters'
-    var query= '/?'
+    var query= '/'
     // var dataStore = this;
     var myMonsters = [];
 
@@ -36,14 +36,14 @@ function MonsterService(){
 });
 
     this.editMonster=function(index, monster, callWhenDone){
-        $.put(baseUrl + query, function(res){
+        $.put(baseUrl + query+ index, monster, function(res){
             callWhenDone(res)
         })
     }
 
     
     this.deleteMonster=function(index, callWhenDone){
-        $.delete(baseUrl + query, index, function(res){
+        $.delete(baseUrl + query+index, index, function(res){
             callWhenDone(res)
         })
     }
