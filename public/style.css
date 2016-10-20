@@ -1,11 +1,90 @@
 body{
-    background-color: greenyellow
-
+    background-color: #663800;
+    background-image: url(http://clipartix.com/wp-content/uploads/2016/07/Jack-o-lantern-jack-lantern-eyes-clipart.png);
+    background-position: fixed;
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    text-shadow: 1px 1px black;
 }
 .edit{
     background-color: red;
-   border: 50px dashed cadetblue;
+   border: 5px solid cadetblue;
     position: fixed;
+    border-radius:10px;
     z-index: 9999;
-    text-align: center;
+    /*display: flex;*/
+    /*text-align: center;*/
+    /*align-content: center;*/
+    /*justify-content: center;*/
+    width:80%;
+    height: auto;
 }
+/*.editBox{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /*width:contain;*/
+    /*height: auto;*/
+/*}*/
+
+.monster-card{
+    border: 3px solid silver;
+    background-color: darkorange;
+    opacity: .8;
+    border-radius: 10px;
+    font-family: Courier New, Courier, monospace;
+    margin: 8px;
+    padding: 5px;
+}
+.monster-pic{
+    max-width: 100%;
+    height: auto;
+}
+    .yellow{
+        background: yellow;
+        /*opacity: .8;*/
+    }
+    .red{
+        background:darkred;
+        /*opacity: .8;*/
+    }
+    .grey{
+        background:grey;
+        /*opacity: .8;*/
+    }
+    .green{
+        background:green;
+        /*opacity: .8;*/
+    }
+    .black{
+        background-color: black;
+        /*opacity: .8;*/
+        color: snow;
+    }
+    .white{
+        background-color: snow;
+        /*opacity: .8;*/
+    }
+    .blue{
+        background-color: darkblue;
+        /*opacity: .8;*/
+    }
+    .never{
+        opacity: .2
+    }
+    .rare{
+        opacity:.4
+    }
+    .uncommon{
+        opacity:.6
+    }
+    .common{
+        opacity:.8
+    }
+    .boring{
+        opacity:1
+    }

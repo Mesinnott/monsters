@@ -32,19 +32,69 @@
         debugger
         var monsterElem = $('#monsterCards')
         var myTemplate = ''
+        var x=''
+        var seen=''
+        // var monsterClass=''
         for (var i = 0; i < array.length; i++) {
             var nextM = array[i];
 
+            switch(nextM.type)   {
+                case 'vampire':
+                monsterClass='red'
+                break;
+                case 'zombie':
+                monsterClass='green'
+                break;
+                case 'robot':
+                monsterClass='grey'
+                break;
+                case 'witch':
+                monsterClass='black'
+                break;
+                case 'monster':
+                monsterClass='yellow'
+                break;
+                case 'ghost':
+                monsterClass ='white'
+                break;
+                case 'other':
+                monsterClass = 'blue'
+                break;
+                default:
+                monsterClass=''
+            }
+    x=nextM.sightings
+    switch(x)   {
+                case (x==0):
+                seen='never'
+                break;
+                case 0<x<=10:
+                seen='rare'
+                break;
+                case 10<x<=50:
+                seen='uncommon'
+                break;
+                case 50<x<=100:
+                seen='common'
+                break;
+                case (x>100):
+                seen='boring'
+                break;
+                default:
+                seen='rare'
+            }
+
+
             myTemplate +=
-                `<div class='monster-card col-xs-4'>
+                `<div class='monster-card ${monsterClass} ${seen} col-xs-12 col-sm-4'>
                 <img class= 'monster-pic' src='${nextM.url}' alt=''>
-                <h3> Name: ${nextM.name}</h3>
-                <h4>age:${nextM.age}</h4>
-                <h4>description:${nextM.description}</h4>
-                <h4>type:${nextM.type}</h4>
+                <h4><b>'${nextM.name}'</b> is a ${nextM.description} <b>${nextM.type}</b>. This terror has tormented the world for <b>${nextM.age}</b> years already.<h4> 
+                
                 <button class= 'btn btn-danger remove-monster' id=${i}> KILL THE MONSTER </button>
                 <button class= 'btn btn-primary edit-monster' id=${i}> EDIT THE MONSTER </button>
             </div>`
+            
+            
         }
         monsterElem.empty()
         monsterElem.append(myTemplate);
